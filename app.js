@@ -5,5 +5,9 @@ const modal = document.querySelector(".modal");
 smallImg.forEach(function(img){
     img.addEventListener("click", function(){
         modal.classList.add("open");
+        fullImg.classList.add("open");
+        
+        const originalQuality = img.getAttribute('alt')
+        fullImg.src = `img/full/${originalQuality}.jpg`;
     });
 });
