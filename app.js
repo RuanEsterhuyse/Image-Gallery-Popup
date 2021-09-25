@@ -11,3 +11,10 @@ smallImg.forEach(function(img){
         fullImg.src = `img/full/${originalQuality}.jpg`;
     });
 });
+
+modal.addEventListener('click',function(e){
+    if(e.target.classList.contains('modal')){
+        modal.classList.remove('open');
+        fullImg.classList.remove('open');
+    }
+})
